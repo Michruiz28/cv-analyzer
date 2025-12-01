@@ -1,33 +1,57 @@
 import os
-from azure.core.credentials import AzureKeyCredential
-from azure.ai.formrecognizer import DocumentAnalysisClient
-from dotenv import load_dotenv
-load_dotenv()
+import json
+from dotenv import load_dotenv  # <--- IMPORT THIS
+from openai import AzureOpenAI
 
-endpoint = os.getenv("AZURE_DOC_ENDPOINT")
-key = os.getenv("AZURE_DOC_KEY")
+# Load the .env file variables into the system
+load_dotenv() 
 
-client = DocumentAnalysisClient(
-    endpoint=endpoint,
-    credential=AzureKeyCredential(key)
-)
+class ExtractorAgent:
 
-# Ruta a tu PDF local
-file_path = "sample_cv.pdf"
+    def __init__(self):
+        self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        self.key = os.getenv("AZURE_OPENAI_KEY")
+        self.deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 
-with open(file_path, "rb") as f:
-    poller = client.begin_analyze_document(
-        model_id="prebuilt-read",  # ESTE modelo te da texto crudo
-        document=f
-    )
+        # Debugging: Print to check if they are loaded (Remove this in production!)
+        if not self.key or not self.endpoint:
+            raise ValueError("Environment variables not found! Check your .env file.")
 
-result = poller.result()
+        self.client = AzureOpenAI(
+            api_key=self.key,
+            api_version="2024-02-15-preview",
+            azure_endpoint=self.endpoint
+        )
 
-# Extraer todo el texto concatenado
-texto = ""
-for page in result.pages:
-    for line in page.lines:
-        texto += line.content + "\n"
+    def extract_profile(self, texto_crudo: str):
+        system_prompt = """
+        Eres un extractor experto de CVs. Devuelve JSON válido.
+        Estructura requerida:
+        {
+          "nombre": "string",
+          "correo": "string",
+          "telefono": "string",
+          "linkedin": "string",
+          "idiomas": ["string"],
+          "skills_tecnicas": ["string"],
+          "soft_skills": ["string"],
+          "anios_experiencia": null,
+          "educacion": [{"institucion": "", "titulo": "", "anio": ""}],
+          "experiencia_laboral": [{"cargo": "", "empresa": "", "periodo": "", "descripcion": ""}]
+        }
+        """
 
-print("\n===== TEXTO EXTRAÍDO =====\n")
-print(texto)
+        try:
+            response = self.client.chat.completions.create(
+                model=self.deployment, 
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": texto_crudo}
+                ],
+                temperature=0,
+                response_format={"type": "json_object"} 
+            )
+            return json.loads(response.choices[0].message.content)
+        except Exception as e:
+            print(f"Error calling OpenAI: {e}")
+            return {}

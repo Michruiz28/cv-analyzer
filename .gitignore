@@ -32,5 +32,3 @@ logs/
 # Jupyter
 .ipynb_checkpoints/
 
-# notebooks
-*.ipynb
