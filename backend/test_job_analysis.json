@@ -4,7 +4,7 @@
   "original_text": "\n    Senior Full-Stack Developer\n    TechCorp Inc. - Remote\n    \n    We are seeking an experienced Senior Full-Stack Developer.\n    \n    Responsibilities:\n    - Design and develop web applications using React and Node.js\n    - Lead technical discussions and code reviews\n    - Mentor junior developers\n    - Optimize performance and scalability\n    \n    Requirements:\n    - 5+ years of full-stack development experience\n    - Strong proficiency in JavaScript, React, Node.js, TypeScript\n    - Experience with AWS or Azure\n    - Knowledge of Docker and Kubernetes\n    - Bachelor's degree in Computer Science\n    \n    Nice to Have:\n    - Experience with microservices\n    - Knowledge of Python or Go\n    - AWS certifications\n    \n    Benefits:\n    - Salary: $140k - $180k\n    - Full remote work\n    - Health insurance\n    - Professional development budget\n    ",
   "document_metadata": {
     "source": "text_input",
-    "executive_summary": "Senior Full-Stack Developer en TechCorp Inc., una posición remota orientada a liderar el desarrollo de aplicaciones web modernas. El puesto está enfocado en un stack JavaScript/TypeScript con React en frontend y Node.js en backend, ofrece salario entre $140k y $180k y beneficios como trabajo 100% remoto, seguro de salud y presupuesto para desarrollo profesional. Es una oportunidad a nivel senior con responsabilidad sobre entregas técnicas y calidad de producto.\n\nLas responsabilidades principales incluyen diseñar y desarrollar aplicaciones web usando React y Node.js, conducir discusiones técnicas y revisiones de código, mentorizar a desarrolladores junior y optimizar el rendimiento y la escalabilidad de sistemas en producción. Se espera que la persona participe activamente en decisiones de arquitectura y en la mejora continua de procesos de ingeniería.\n\nLos requisitos críticos son al menos 5+ años de experiencia, título universitario en informática (o equivalente), dominio de JavaScript/TypeScript, experiencia sólida con React y Node.js, y conocimientos en nube (AWS o Azure) así como en contenedores y orquestación (Docker y Kubernetes). Además se valoran habilidades de liderazgo, mentoría y comunicación técnica.\n\nAspectos destacables incluyen la modalidad remota plena, un rango salarial competitivo y apoyo para formación. Como puntos diferenciadores, se valoran experiencia con microservicios, Python o Go y certificaciones AWS. Tras leer esto podrás evaluar si cumples los requisitos, si el rol encaja con tus expectativas y si vale la pena aplicar."
+    "executive_summary": "TechCorp Inc. busca un Senior Full-Stack Developer para un puesto remoto centrado en el desarrollo de aplicaciones web modernas. La posición requiere liderazgo técnico dentro de un equipo experimentado y se orienta a quienes quieran combinar implementación de producto con responsabilidad por la calidad arquitectónica y el rendimiento a escala.\n\nEl rol implica diseñar y desarrollar interfaces y servicios usando React y Node.js, conducir discusiones técnicas y revisiones de código, y desempeñar un papel activo de mentoría para desarrolladores junior. Además se espera optimizar la performance y la escalabilidad de las aplicaciones, colaborando con otros equipos para garantizar despliegues fiables en entornos de nube y contenedores.\n\nRequisitos críticos incluyen al menos 5+ años de experiencia, dominio de JavaScript/TypeScript, experiencia práctica con React y Node.js, y conocimientos de cloud (AWS o Azure) y orquestación con Docker/Kubernetes. Se valora formación en informática o afín y competencias de liderazgo, comunicación y resolución de problemas. Experiencias con microservicios, Python/Go o certificaciones AWS son un plus, no obligatorias.\n\nAspectos destacables: posición 100% remota con rango salarial de $140k–$180k, seguro de salud y presupuesto para desarrollo profesional. Si cumples la base técnica y te interesa liderar y mentorizar en entornos cloud, la oferta merece consideración; si te faltan varios requisitos clave, podrías priorizar roles más alineados."
   },
   "analysis": {
     "job_id": null,
@@ -21,41 +21,52 @@
       "JavaScript",
       "JS",
       "React",
+      "React.js",
       "Node.js",
       "Node",
       "TypeScript",
       "AWS",
       "Azure",
       "Docker",
-      "Kubernetes"
+      "Kubernetes",
+      "K8s"
     ],
     "experience_required": "5+ anos",
     "education": "Bachelor's degree in Computer Science",
     "soft_skills": [
       "Leadership",
       "Mentoring",
-      "Technical communication"
+      "Communication",
+      "Collaboration",
+      "Problem solving"
     ],
     "ats_keywords": [
+      "Senior",
+      "Full-Stack",
+      "Full stack",
       "JavaScript",
       "JS",
       "React",
-      "TypeScript",
+      "React.js",
       "Node.js",
       "Node",
+      "TypeScript",
       "AWS",
       "Azure",
       "Docker",
       "Kubernetes",
+      "K8s",
       "microservices",
       "Python",
       "Go",
       "AWS certifications",
-      "Full-stack",
-      "Code reviews",
-      "Mentoring",
-      "Performance",
-      "Scalability"
+      "code review",
+      "mentoring",
+      "web applications",
+      "performance",
+      "scalability",
+      "lead",
+      "senior developer"
     ],
     "location": "Remote",
     "work_mode": "Remote",
@@ -68,13 +79,12 @@
     "required_languages": [],
     "nice_to_have": [
       "Experience with microservices",
-      "Knowledge of Python",
-      "Knowledge of Go",
+      "Knowledge of Python or Go",
       "AWS certifications"
     ],
-    "analyzed_at": "2025-12-03 01:24:12.343022"
+    "analyzed_at": "2025-12-03T23:06:12.538066"
   },
   "status": "analyzed",
-  "created_at": "2025-12-03 01:24:12.363678",
-  "updated_at": "2025-12-03 01:24:12.363688"
+  "created_at": "2025-12-03T23:06:12.538399",
+  "updated_at": "2025-12-03T23:06:12.538401"
 }

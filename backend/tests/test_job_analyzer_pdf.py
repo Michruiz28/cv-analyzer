@@ -1,22 +1,25 @@
+import os
 from agents.job_analyzer import JobAnalyzerAgent
 
-# *** Cambia esta ruta por la de tu PDF ***
-pdf_path = r"C:\Users\michr\Downloads\HOJADEVIDA.pdf.pdf"
+print("\n🚀 INICIANDO TEST DESDE PDF")
+print("=" * 70)
 
-print("\n=== TEST: Job Analyzer desde PDF ===\n")
+agent = JobAnalyzerAgent()
 
-try:
-    agent = JobAnalyzerAgent()
+# Ruta a un PDF real
+pdf_path = r"C:\Users\michr\Downloads\oferta.pdf"
 
-    job = agent.process_job_from_pdf(pdf_path, generate_summary=True)
+if not os.path.exists(pdf_path):
+    raise Exception("❌ No se encontró el archivo PDF. Verifica la ruta.")
 
-    agent.print_analysis_summary(job)
+job = agent.process_job_from_pdf(pdf_path)
 
-    agent.save_analysis(job, "test_job_analysis_pdf.json")
+print("\n📌 TÍTULO:", job.analysis.title)
+print("📌 EMPRESA:", job.analysis.company)
+print("📌 RESPONSABILIDADES:", len(job.analysis.responsibilities))
+print("📌 REQUISITOS:", len(job.analysis.technical_requirements))
 
-    print("\n✔ Test completado. Archivo generado: test_job_analysis_pdf.json\n")
+# Guardar análisis para verificar
+agent.save_analysis(job, "job_analysis_from_pdf.json")
 
-except Exception as e:
-    print(f"\n❌ ERROR durante el test: {str(e)}\n")
-    import traceback
-    traceback.print_exc()
+print("\n✅ TEST COMPLETADO. Archivo generado: job_analysis_from_pdf.json")
