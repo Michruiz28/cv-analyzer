@@ -1,0 +1,80 @@
+{
+  "id": null,
+  "user_id": null,
+  "original_text": "\n    Senior Full-Stack Developer\n    TechCorp Inc. - Remote\n    \n    We are seeking an experienced Senior Full-Stack Developer.\n    \n    Responsibilities:\n    - Design and develop web applications using React and Node.js\n    - Lead technical discussions and code reviews\n    - Mentor junior developers\n    - Optimize performance and scalability\n    \n    Requirements:\n    - 5+ years of full-stack development experience\n    - Strong proficiency in JavaScript, React, Node.js, TypeScript\n    - Experience with AWS or Azure\n    - Knowledge of Docker and Kubernetes\n    - Bachelor's degree in Computer Science\n    \n    Nice to Have:\n    - Experience with microservices\n    - Knowledge of Python or Go\n    - AWS certifications\n    \n    Benefits:\n    - Salary: $140k - $180k\n    - Full remote work\n    - Health insurance\n    - Professional development budget\n    ",
+  "document_metadata": {
+    "source": "text_input",
+    "executive_summary": "Senior Full-Stack Developer en TechCorp Inc., una posición remota orientada a liderar el desarrollo de aplicaciones web modernas. El puesto está enfocado en un stack JavaScript/TypeScript con React en frontend y Node.js en backend, ofrece salario entre $140k y $180k y beneficios como trabajo 100% remoto, seguro de salud y presupuesto para desarrollo profesional. Es una oportunidad a nivel senior con responsabilidad sobre entregas técnicas y calidad de producto.\n\nLas responsabilidades principales incluyen diseñar y desarrollar aplicaciones web usando React y Node.js, conducir discusiones técnicas y revisiones de código, mentorizar a desarrolladores junior y optimizar el rendimiento y la escalabilidad de sistemas en producción. Se espera que la persona participe activamente en decisiones de arquitectura y en la mejora continua de procesos de ingeniería.\n\nLos requisitos críticos son al menos 5+ años de experiencia, título universitario en informática (o equivalente), dominio de JavaScript/TypeScript, experiencia sólida con React y Node.js, y conocimientos en nube (AWS o Azure) así como en contenedores y orquestación (Docker y Kubernetes). Además se valoran habilidades de liderazgo, mentoría y comunicación técnica.\n\nAspectos destacables incluyen la modalidad remota plena, un rango salarial competitivo y apoyo para formación. Como puntos diferenciadores, se valoran experiencia con microservicios, Python o Go y certificaciones AWS. Tras leer esto podrás evaluar si cumples los requisitos, si el rol encaja con tus expectativas y si vale la pena aplicar."
+  },
+  "analysis": {
+    "job_id": null,
+    "title": "Senior Full-Stack Developer",
+    "company": "TechCorp Inc.",
+    "seniority_level": "Senior",
+    "responsibilities": [
+      "Design and develop web applications using React and Node.js",
+      "Lead technical discussions and code reviews",
+      "Mentor junior developers",
+      "Optimize performance and scalability"
+    ],
+    "technical_requirements": [
+      "JavaScript",
+      "JS",
+      "React",
+      "Node.js",
+      "Node",
+      "TypeScript",
+      "AWS",
+      "Azure",
+      "Docker",
+      "Kubernetes"
+    ],
+    "experience_required": "5+ anos",
+    "education": "Bachelor's degree in Computer Science",
+    "soft_skills": [
+      "Leadership",
+      "Mentoring",
+      "Technical communication"
+    ],
+    "ats_keywords": [
+      "JavaScript",
+      "JS",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Node",
+      "AWS",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "microservices",
+      "Python",
+      "Go",
+      "AWS certifications",
+      "Full-stack",
+      "Code reviews",
+      "Mentoring",
+      "Performance",
+      "Scalability"
+    ],
+    "location": "Remote",
+    "work_mode": "Remote",
+    "salary_range": "$140k - $180k",
+    "benefits": [
+      "Full remote work",
+      "Health insurance",
+      "Professional development budget"
+    ],
+    "required_languages": [],
+    "nice_to_have": [
+      "Experience with microservices",
+      "Knowledge of Python",
+      "Knowledge of Go",
+      "AWS certifications"
+    ],
+    "analyzed_at": "2025-12-03 01:24:12.343022"
+  },
+  "status": "analyzed",
+  "created_at": "2025-12-03 01:24:12.363678",
+  "updated_at": "2025-12-03 01:24:12.363688"
+}
