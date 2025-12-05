@@ -1,0 +1,50 @@
+{
+  "nombre": "MICHELLE DAYANA RUIZ CARRANZA",
+  "correo": "michruiz2827@gmail.com",
+  "telefono": "+57-3142038935",
+  "linkedin": "https://www.linkedin.com/in/michelle-dayana-ruiz-carranza-8a9039210/",
+  "idiomas": [
+    "Español"
+  ],
+  "skills_tecnicas": [
+    "Microsoft Excel",
+    "Python",
+    "R",
+    "Microsoft Outlook",
+    "Ventas",
+    "Atención a clientes"
+  ],
+  "soft_skills": [
+    "Escucha activa",
+    "Empatía",
+    "Proactividad",
+    "Interés en aprender"
+  ],
+  "anios_experiencia": null,
+  "educacion": [
+    {
+      "institucion": "Colegio Mixto Ciudadanos del Futuro",
+      "titulo": "Bachillerato",
+      "anio": "Ene 2014-Dic 2020"
+    },
+    {
+      "institucion": "Escuela Colombiana de Ingeniería Julio Garavito",
+      "titulo": "Ingeniería Estadística (en curso)",
+      "anio": "Ago 2021-Actualmente"
+    }
+  ],
+  "experiencia_laboral": [
+    {
+      "cargo": "Asesora Comercial",
+      "empresa": "Almacén Fábrica Sacos y Suéteres Katrina",
+      "periodo": "Dic 2022 - Ene 2023",
+      "descripcion": "Atención al cliente, destacando escucha activa y empatía. Trabajo enfocado en entender y satisfacer las necesidades de los clientes."
+    },
+    {
+      "cargo": "Asesora Comercial",
+      "empresa": "Almacén Fábrica Sacos y Suéteres Katrina",
+      "periodo": "Dic 2023 - Ene 2024",
+      "descripcion": "Atención al cliente con énfasis en la escucha y la empatía para brindar soluciones y soporte durante el proceso de venta."
+    }
+  ]
+}
