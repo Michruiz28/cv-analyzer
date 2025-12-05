@@ -76,7 +76,7 @@ def process_files(uploaded_files):
             tmp.write(uploaded_file.read())
             temp_path = tmp.name
 
-        status_text.text(f"⏳ Procesando: {filename} ({i+1}/{len(uploaded_files)})...")
+        status_text.text(f" Procesando: {filename} ({i+1}/{len(uploaded_files)})...")
         
         # Ejecutar agente
         resultado = agent.process_cv(temp_path)
@@ -87,9 +87,9 @@ def process_files(uploaded_files):
         # Si el resultado es JSON válido, almacenar
         if 'error' not in resultado:
             st.session_state.processed_cvs.append(resultado)
-            status_text.text(f"✅ Procesado y almacenado: {filename}")
+            status_text.text(f" Procesado y almacenado: {filename}")
         else:
-            st.warning(f"❌ Falló el procesamiento de {filename}. Error: {resultado['error']}")
+            st.warning(f" Falló el procesamiento de {filename}. Error: {resultado['error']}")
 
         # Actualizar barra de progreso
         progress_bar.progress((i + 1) / len(uploaded_files))
@@ -99,9 +99,9 @@ def process_files(uploaded_files):
 
 # --- Estructura de la Aplicación Streamlit ---
 
-st.set_page_config(page_title="CV Analyzer", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="CV Analyzer", layout="wide")
 
-st.title("📄 Agente de Análisis de CVs por Lotes")
+st.title("Agente de Análisis de CVs por Lotes")
 st.write("Sube múltiples archivos PDF para extraer información clave y generar estadísticas agregadas.")
 st.markdown("---")
 
@@ -122,7 +122,7 @@ with col2:
     if uploaded_files:
         st.info(f"Archivos listos para procesar: {len(uploaded_files)}")
         # Botón para iniciar el procesamiento por lotes
-        if st.button("🚀 Iniciar Análisis de Lote"):
+        if st.button(" Iniciar Análisis de Lote"):
             process_files(uploaded_files)
 
 st.markdown("---")
@@ -133,7 +133,7 @@ if st.session_state.processed_cvs:
     
     df_cvs = pd.DataFrame(st.session_state.processed_cvs)
     
-    st.header("📊 Resultados Agregados y Estadísticas")
+    st.header(" Resultados Agregados y Estadísticas")
     
     # 4. Estadísticas Descriptivas (Contador)
     st.metric(
@@ -150,19 +150,19 @@ if st.session_state.processed_cvs:
 
     # Skills Técnicas
     with col_skills:
-        st.info("🛠️ **Skills Técnicas más Comunes**")
+        st.info("Skills Técnicas más Comunes")
         tech_skills = df_cvs['skills_tecnicas'].dropna().tolist()
         create_wordcloud(tech_skills, "Skills Técnicas")
 
     # Soft Skills
     with col_soft:
-        st.info("🤝 **Soft Skills más Comunes**")
+        st.info("Soft Skills más Comunes")
         soft_skills = df_cvs['soft_skills'].dropna().tolist()
         create_wordcloud(soft_skills, "Soft Skills")
 
     # Idiomas
     with col_idiomas:
-        st.info("🗣️ **Idiomas y Nivel**")
+        st.info("Idiomas y Nivel")
         languages = df_cvs['idiomas'].dropna().tolist()
         create_wordcloud(languages, "Idiomas")
 

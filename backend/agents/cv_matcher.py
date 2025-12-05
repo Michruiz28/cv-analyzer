@@ -7,7 +7,8 @@ import logging
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 
-from services.azure_openai_service import AzureOpenAIService
+from backend.services.azure_openai_service import AzureOpenAIService
+
 
 from typing import Any, TYPE_CHECKING
 

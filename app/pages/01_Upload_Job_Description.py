@@ -25,7 +25,7 @@ def process_job_file(uploaded_file):
     try:
         agent = JobAnalyzerAgent()
     except Exception as e:
-        st.error(f"⚠️ Error inicializando JobAnalyzerAgent: {e}")
+        st.error(f"Error inicializando JobAnalyzerAgent: {e}")
         return
 
     # Guardar PDF temporalmente
@@ -36,10 +36,10 @@ def process_job_file(uploaded_file):
     try:
         job_obj = agent.process_job_from_pdf(temp_path, generate_summary=True)
         st.session_state.processed_jobs.append(job_obj)
-        st.success(f"✔️ Procesado correctamente: {uploaded_file.name}")
+        st.success(f" Procesado correctamente: {uploaded_file.name}")
 
     except Exception as e:
-        st.error(f"❌ Error procesando {uploaded_file.name}: {e}")
+        st.error(f" Error procesando {uploaded_file.name}: {e}")
 
     finally:
         os.unlink(temp_path)
@@ -49,11 +49,10 @@ def process_job_file(uploaded_file):
 # ------------------------------------------------------------
 st.set_page_config(
     page_title="Job Analyzer",
-    page_icon="📝",
     layout="wide"
 )
 
-st.title("📝 Analizador de Ofertas Laborales")
+st.title("Analizador de Ofertas Laborales")
 st.write("Sube un archivo PDF con la oferta laboral y obtén un análisis completo en texto.")
 st.markdown("---")
 
@@ -64,7 +63,7 @@ uploaded_pdf = st.file_uploader("Sube el PDF de la oferta laboral", type=["pdf"]
 
 if uploaded_pdf:
     st.info(f"Archivo listo: **{uploaded_pdf.name}**")
-    if st.button("🚀 Procesar Oferta Laboral"):
+    if st.button(" Procesar Oferta Laboral"):
         process_job_file(uploaded_pdf)
 
 st.markdown("---")
@@ -72,27 +71,27 @@ st.markdown("---")
 # ------------------------------------------------------------
 # Mostrar Resultados
 # ------------------------------------------------------------
-st.header("📄 Análisis de Ofertas")
+st.header(" Análisis de Ofertas")
 
 if st.session_state.processed_jobs:
     for idx, job in enumerate(st.session_state.processed_jobs, 1):
         analysis = job.analysis
 
-        st.markdown(f"## 📝 Oferta {idx}: {analysis.title or 'Sin título'}")
+        st.markdown(f"## Oferta {idx}: {analysis.title or 'Sin título'}")
 
                 # Datos clave al inicio
         cols = st.columns([3, 1, 1])  # columna más grande para la empresa
         with cols[0]:
             if analysis.company:
-                st.markdown(f"**🏢 Empresa:** {analysis.company}")
+                st.markdown(f"Empresa: {analysis.company}")
 
         with cols[1]:
             if analysis.seniority_level:
-                st.markdown(f"**💼 Seniority:** {analysis.seniority_level}")
+                st.markdown(f" Seniority: {analysis.seniority_level}")
 
         with cols[2]:
             if analysis.location:
-                st.markdown(f"**📍 Ubicación:** {analysis.location}")
+                st.markdown(f"Ubicación: {analysis.location}")
 
         st.markdown("---")
 
@@ -101,22 +100,22 @@ if st.session_state.processed_jobs:
 
         if analysis.responsibilities:
             with left_col:
-                st.subheader("⚡ Responsabilidades")
+                st.subheader("Responsabilidades")
                 for r in analysis.responsibilities:
                     st.write(f"- {r}")
 
         if analysis.technical_requirements or analysis.soft_skills:
             with right_col:
                 if analysis.technical_requirements:
-                    st.subheader("🛠 Requisitos Técnicos")
+                    st.subheader(" Requisitos Técnicos")
                     st.write(", ".join(analysis.technical_requirements))
                 if analysis.soft_skills:
-                    st.subheader("💡 Soft Skills")
+                    st.subheader(" Soft Skills")
                     st.write(", ".join(analysis.soft_skills))
 
         # Resumen ejecutivo destacado
         if "executive_summary" in job.document_metadata:
-            st.markdown("### 📌 Resumen Ejecutivo")
+            st.markdown("Resumen Ejecutivo")
             st.info(job.document_metadata["executive_summary"])
 
         st.markdown("─" * 80)
