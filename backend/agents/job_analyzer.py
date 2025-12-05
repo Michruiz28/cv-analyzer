@@ -6,10 +6,10 @@ import logging
 from typing import Dict
 from datetime import datetime
 
-from services.azure_openai_service import AzureOpenAIService
-from services.document_intelligence_service import DocumentIntelligenceService
-from models.job import Job, JobAnalysis
-from utils.prompts import (
+from backend.services.azure_openai_service import AzureOpenAIService
+from backend.services.document_intelligence_service import DocumentIntelligenceService
+from backend.models.job import Job, JobAnalysis
+from backend.utils.prompts import (
     JOB_ANALYSIS_SYSTEM_PROMPT,
     JOB_SUMMARY_SYSTEM_PROMPT,
     get_job_analysis_prompt,

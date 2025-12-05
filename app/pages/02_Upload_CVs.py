@@ -7,16 +7,15 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import pandas as pd # Necesario para aplanamiento de listas
 
-# --- Configuración del Entorno ---
-# Agregar la raíz del proyecto al sys.path
-# Si la estructura es 'agents/extractor_agent.py' y 'streamlit_app.py' están al mismo nivel, 
-# puede que necesites ajustar la ruta, o solo usar:
-# sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-# Mantendremos la estructura que proporcionaste, asumiendo que funciona.
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-sys.path.append(ROOT_DIR)
+# Ruta absoluta al directorio raíz del proyecto
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+BACKEND_DIR = os.path.join(PROJECT_ROOT, "backend")
 
-from agents.extractor_agent import ExtractorAgent
+# Agregar rutas al sys.path
+sys.path.append(PROJECT_ROOT)
+sys.path.append(BACKEND_DIR)
+
+from backend.agents.extractor_agent import ExtractorAgent
 
 # --- Inicialización de Session State ---
 # Esta es la base de datos temporal de tu aplicación
